@@ -40,7 +40,6 @@ Run tests with:
 - Twitter: [@twitterhandle](https://twitter.com/phayte_p)
 - LinkedIn: [LinkedIn](https://linkedin.com/in/chidinma-faith)
 
-
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
