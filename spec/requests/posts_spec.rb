@@ -5,7 +5,7 @@ RSpec.describe 'Posts', type: :request do
     before(:each) { get user_posts_path user_id: 2 }
 
     it 'returns http success' do
-      expect(response).to have_http_status(:ok )
+      expect(response).to have_http_status(:ok)
     end
 
     it 'should render the correct template' do
@@ -21,7 +21,7 @@ RSpec.describe 'Posts', type: :request do
     before(:each) { get user_post_path user_id: 10, id: 6 }
 
     it 'returns http success' do
-      expect(response).to have_http_status(:ok )
+      expect(response).to have_http_status(:ok)
     end
     it 'should render the correct template' do
       expect(response).to render_template(:show)
