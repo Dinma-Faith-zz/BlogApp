@@ -6,7 +6,7 @@ class User < ApplicationRecord
   validates :postcounter, numericality: { greater_than_or_equal_to: 0 }
 
   #   A method that returns the 3 most recent posts for a given user.
-  def posts_recent
+  def recent_posts
     posts.order(created_at: :desc).limit(3)
   end
 end

@@ -1,1 +1,12 @@
-<h1>Show User Details</h1>
+<div>
+  <h1>Show User Details/Posts :</h1>
+  <div >
+
+    <% @recent_posts.each do |post| %>
+        <%= render post %>
+          <% end %>
+</div>
+<%= link_to "View All Posts", user_posts_path(@user, @user.posts) %>
+<br/><br/>
+<%= link_to "Back to user", users_path(@user) %>
+</div>

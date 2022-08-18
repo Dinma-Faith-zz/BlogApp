@@ -1,0 +1,18 @@
+<div> recent posts</div>
+
+ <h2>
+    <span>
+
+     Title: <%= post.title %>
+     id: <%= post.id %>
+    </span>
+  </h2>
+   <p>
+   Text content: <%= post.text %>
+  </p>
+
+  <small>
+    <span>Comment: <%= post.comments_counter %> </span>
+    <div> <%= link_to "See post", user_post_path(post.user, post) %> </div>
+
+  </small>
