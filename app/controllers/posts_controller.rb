@@ -26,12 +26,12 @@ class PostsController < ApplicationController
       else
         format.html { render :new, alert: 'Error in creating post' }
       end
-    end 
+    end
   end
 
   private
+
   def post_params
     params.require(:post).permit(:title, :text)
   end
-
 end
