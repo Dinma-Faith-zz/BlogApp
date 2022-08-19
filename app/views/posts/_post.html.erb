@@ -13,6 +13,9 @@
 
   <small>
     <span>Comment: <%= post.comments_counter %> </span>
+    <% post.most_recent_five_comments.each do |comment| %>
+      <h4><%= comment.author.name%>: <%= comment.text%></h4>
+    <%end%>
     <div> <%= link_to "See post", user_post_path(post.user, post) %> </div>
 
   </small>
