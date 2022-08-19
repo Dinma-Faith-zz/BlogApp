@@ -1,0 +1,8 @@
+<%= link_to user do %>
+
+  <div>
+  <img  src="<%= user.photo %>" alt="user photo" class="user-img" />
+    <h2> <%= user.name %> </h2>
+    <h4> Number of posts: <%= user.postcounter %> </h4>
+  </div>
+  <% end %>

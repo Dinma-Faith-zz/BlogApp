@@ -1,1 +1,10 @@
-<h1>Display Users</h1>
+<div >
+  <h1>Display Users :</h1>
+
+  <div >
+  <% @users.each do |user| %>
+    <%= render partial: "users/user", locals: {user: user} %>
+
+  <% end %>
+</div>
+</div>
