@@ -1,7 +1,20 @@
-<h1>Show Post Details</h1>
-
 <div>
   <%= render partial: "posts/postdetail" , locals: { post: @post } %>
+  <div>
+  <div class="card">
+    <div class="card-header">
+      <h4><% @comments.each do |comment| %>
+        <h2><%= comment.author.name%>: <%= comment.text%></h2>
+      <%end%></h4>
+    </div>
+    <div class="card-body">
+      <p class="card-text"><%= render "comment_create", comment: @post %></p>
+    </div>
+    <div>
+      <%= link_to "Back to Posts", user_posts_path, class:"btn btn-dark" %>
+    </div>
+  </div>
+</div>
 
   <%= link_to "Back to user", users_path(@user) %>
 

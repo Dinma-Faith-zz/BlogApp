@@ -1,7 +1,12 @@
 <div>
     <h2>
-      Post by <%= post.user.name %>
+      <%= post.title %> by <%= post.user.name %>
     </h2>
+
+    <%= form_with url: "/posts/#{@post.id}/likes", scope: :like do |form| %>
+      <%= form.submit "Like this post", class: "btn btn-danger"%>
+    <% end %>
+
     <small>
       <span>Comment: <%= post.comments_counter %>, Likes: <%= post.likes_counter %></span>
     </small>
@@ -9,23 +14,5 @@
   <p>
     <%= post.text %>
   </p>
-   Likes
 
-<div>
-  <h3>Comments:</h3>
-  <% if @post.comments.empty? %>
-    <p>There's no comment!</p>
-  <% end %>
-  <% @post.comments.each do |comment| %>
-    <div class="comment-card">
-      <strong>
-        <%= link_to user_path(comment.author_id) do %>
-          <%= comment.author.name %>
-        <% end %>
-        :
-      </strong>
-      <%= comment.text %>
-    </div>
-  <% end %>
-</div>
 </div>
