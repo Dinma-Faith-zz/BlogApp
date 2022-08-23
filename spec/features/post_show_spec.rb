@@ -16,6 +16,14 @@ RSpec.describe 'post', type: :feature do
       Comment.create!(author: user, post:, text: 'text')
     end
 
+    let(:post) do
+      Post.create!(user:, title: 'title', text: 'text', comments_counter: 0, likes_counter: 0)
+    end
+
+    let(:comment) do
+      Comment.create!(author: user, post:, text: 'text')
+    end
+
     it "shows the user's post's body" do
       user.save
       post.save
@@ -59,4 +67,3 @@ RSpec.describe 'post', type: :feature do
       expect(page).to have_content(post.comments.first)
     end
   end
-end
