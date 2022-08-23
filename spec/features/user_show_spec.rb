@@ -9,7 +9,7 @@ RSpec.describe 'users', type: :feature do
     end
 
     let(:post) do
-      Post.create!(user:, title: 'Hello', text: 'Hey there', comments_counter: 0, likes_counter: 0)
+      Post.create!(user:, title: 'My title', text: 'Hey there', comments_counter: 0, likes_counter: 0)
     end
 
     it 'shows the profile picture of user' do
@@ -48,7 +48,7 @@ RSpec.describe 'users', type: :feature do
       expect(page).to have_current_path(user_posts_path(user))
     end
 
-    it 'redirects me to a post"s show page when link is clicked' do
+    it "redirects me to a post's show page when link is clicked" do
       user.save
       post.save
       visit user_path(user)
