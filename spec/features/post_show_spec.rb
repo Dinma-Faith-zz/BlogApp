@@ -67,3 +67,4 @@ RSpec.describe 'post', type: :feature do
       expect(page).to have_content(post.comments.first)
     end
   end
+end
