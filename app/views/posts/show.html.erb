@@ -1,6 +1,9 @@
 <div class="user_con">
   <div class="user_data_post">
     <h2><%= @post.title %> by <span><%= @post.user.name %></span></h2>
+    <p>
+      Text content: <%= @post.text %>
+    </p>
     <%= form_with url: "/posts/#{@post.id}/likes", scope: :like do |form| %>
       <%= form.submit "Like this post", class: "btn btn-danger"%>
     <% end %>

@@ -1,12 +1,25 @@
 <div>
-  <h1>Show User Details/Posts :</h1>
+<%= link_to "New post", new_user_post_path(@user) %>
+
+  <h1>Posts :</h1>
+  <p>Show User Details</p>
+  <h3> <%= @user.name %> </h3>
+  <img src="<%= @user.photo %>"  alt="User Profile Picture">
+  <h3> <%= @user.bio %> </h3>
+  <h3> <%= @user.postcounter %> </h3>
+
   <div >
 
     <% @recent_posts.each do |post| %>
+<%= link_to post.title, user_post_path(post.user, post) %>
         <%= render post %>
           <% end %>
 </div>
-<%= link_to "View All Posts", user_posts_path(@user, @user.posts) %>
+<%= link_to "View All Posts", user_posts_path(@user) %>
+
+<br />
+<%= link_to "See all users", users_path(@user)  %>
+
 <br/><br/>
 <%= link_to "Back to user", users_path(@user) %>
 </div>
