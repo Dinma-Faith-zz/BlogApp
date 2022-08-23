@@ -1,8 +1,25 @@
-<h1>Show Post Details</h1>
-
+<div class="user_con">
+  <div class="user_data_post">
+    <h2><%= @post.title %> by <span><%= @post.user.name %></span></h2>
+    <p>
+      Text content: <%= @post.text %>
+    </p>
+    <%= form_with url: "/posts/#{@post.id}/likes", scope: :like do |form| %>
+      <%= form.submit "Like this post", class: "btn btn-danger"%>
+    <% end %>
+    <h3>Comment <%= @post.comments_counter%>,  <span>Likes <%= @post.likes_counter%></span></h3>
+  </div>
+</div>
 <div>
-  <%= render partial: "posts/postdetail" , locals: { post: @post } %>
-
-  <%= link_to "Back to user", users_path(@user) %>
-
+  <div class="card">
+    <div class="card-header">
+      
+    </div>
+    <div class="card-body">
+      <p class="card-text"><%= render "comment_create", comment: @post %></p>
+    </div>
+    <div>
+      <%= link_to "Back to Posts", user_posts_path, class:"btn btn-dark" %>
+    </div>
+  </div>
 </div>

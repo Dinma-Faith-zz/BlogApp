@@ -1,0 +1,14 @@
+<%= form_with url: user_posts_path, scope: :post do |form| %>
+    <div class="form-group">
+      <%= form.text_field :title, class:"form-control", placeholder:"Post Title" %>
+    </div>
+    <br />
+    <div class="form-group" style: "display: block">
+      <%= form.text_area :text, class:"form-control", placeholder:"Text", rows: 4, required: true %>
+    </div>
+    <br />
+    <div>
+      <%= form.submit "Post", class:"btn btn-secondary" %>
+    </div>
+  <% end %>
+  
