@@ -40,6 +40,11 @@ Run tests with:
 - Twitter: [@twitterhandle](https://twitter.com/phayte_p)
 - LinkedIn: [LinkedIn](https://linkedin.com/in/chidinma-faith)
 
+👤 **Joy-Kwamboka**
+
+- GitHub: [@githubhandle](https://github.com/kwambiee)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/joy-kwamboka/)
+- Twitter: [@twitterhandle](https://twitter.com/kwambiee)
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
