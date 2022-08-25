@@ -18,6 +18,12 @@
     <div class="card-body">
       <p class="card-text"><%= render "comment_create", comment: @post %></p>
     </div>
+
+    <% if can? :destroy, @post %>
+            <%= button_to "Delete Post", post_path(@post),
+            method: :delete, data: {confirm: "Are you sure you want to delete post?"}, class: "btn btn-danger" %>
+    <% end %>
+
     <div>
       <%= link_to "Back to Posts", user_posts_path, class:"btn btn-dark" %>
     </div>
