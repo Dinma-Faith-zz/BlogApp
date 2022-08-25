@@ -1,14 +1,17 @@
 <h2>Display Users Posts</h2>
 
-<%= render partial: "users/user" , locals: { user: @user } %>
+<%= render partial: "users/user" , locals: { user: current_user } %>
  
 <div class="post-container">
   <% @posts.each_with_index do |post, index| %>
+    
     <%= render partial: "posts/post" , locals: { post: post, index: index } %>
       <% end %>
 
       <%= link_to "Back to user", users_path(@user) %>
 
-
+      <button class="button d-flex justify-content-center">
+        <%= link_to "Create new post", new_user_post_path(current_user, @posts), class:"btn btn-secondary" %>
+      </button>
 
 </div>
